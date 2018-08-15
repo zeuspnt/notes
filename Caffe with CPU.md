@@ -43,6 +43,10 @@ to
 
 ```LIBRARY_DIRS := $(PYTHON_LIB) /usr/local/lib  /usr/lib/x86_64-linux-gnu/hdf5/serial```
 
+or
+
+```LIBRARY_DIRS := $(PYTHON_LIB) /usr/local/lib /usr/lib /usr/lib/x86_64-linux-gnu /usr/lib/x86_64-linux-gnu/hdf5/serial```
+
 This should resolve hdf5 errors when running make
 
 Now within the caffe directory, run the following one after the other
