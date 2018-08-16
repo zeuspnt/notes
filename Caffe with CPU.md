@@ -93,3 +93,12 @@ This, should work. If it throws a 'module not found' error, check if it has been
 /python2.7/lib-tk', '/usr/lib/python2.7/lib-old', '/usr/lib/python2.7/lib-dynload', '/home/nikita/.local/lib/python2.7/site-
 packages']
 ```
+
+## Install Caffe with Intel CPU (MKL - Math Kernel Library)
+
+```
+Intel MKL: http://software.intel.com/en-us/intel-mkl
+Install MKL.
+Set up MKL environment (Details: Linux, OS X). Example: source /opt/intel/mkl/bin/mklvars.sh intel64
+Set BLAS := mkl in Makefile.config
+```
