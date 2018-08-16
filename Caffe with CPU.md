@@ -102,3 +102,14 @@ Install MKL.
 Set up MKL environment (Details: Linux, OS X). Example: source /opt/intel/mkl/bin/mklvars.sh intel64
 Set BLAS := mkl in Makefile.config
 ```
+
+### Error when run make runtest:
+
+```
+.build_release/tools/caffe: error while loading shared libraries: libmkl_rt.so: cannot open shared object file: No such file or directory
+Makefile:537: recipe for target 'runtest' failed
+```
+F
+```
+export LD_LIBRARY_PATH="/opt/intel/mkl/lib/intel64"
+```
