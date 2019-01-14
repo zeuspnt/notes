@@ -25,3 +25,26 @@ protoc src/caffe/proto/caffe.proto --cpp_out=.
 mkdir include/caffe/proto
 mv src/caffe/proto/caffe.pb.h include/caffe/proto
 ```
+
+
+```bash
+CXX src/caffe/solvers/adagrad_solver.cpp
+CXX src/caffe/solvers/adam_solver.cpp
+CXX src/caffe/solvers/rmsprop_solver.cpp
+CXX src/caffe/solvers/nesterov_solver.cpp
+CXX src/caffe/net.cpp
+AR -o .build_release/lib/libcaffe.a
+LD -o .build_release/lib/libcaffe.so.1.0.0
+/usr/bin/ld: cannot find -lcblas
+/usr/bin/ld: cannot find -latlas
+collect2: error: ld returned 1 exit status
+Makefile:587: recipe for target '.build_release/lib/libcaffe.so.1.0.0' failed
+make: *** [.build_release/lib/libcaffe.so.1.0.0] Error 1
+
+```
+
+fix
+sudo apt-get install libatlas-base-dev
+```bash
+
+```
