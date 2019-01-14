@@ -44,7 +44,93 @@ make: *** [.build_release/lib/libcaffe.so.1.0.0] Error 1
 ```
 
 fix
-sudo apt-get install libatlas-base-dev
-```bash
 
+```bash
+sudo apt-get install libatlas-base-dev
 ```
+
+
+```bash
+LD -o .build_release/lib/libcaffe.so.1.0.0
+CXX/LD -o .build_release/tools/extract_features.bin
+CXX/LD -o .build_release/tools/compute_image_mean.bin
+CXX/LD -o .build_release/tools/caffe.bin
+CXX/LD -o .build_release/tools/convert_imageset.bin
+CXX/LD -o .build_release/tools/upgrade_net_proto_binary.bin
+CXX/LD -o .build_release/tools/upgrade_net_proto_text.bin
+CXX/LD -o .build_release/tools/upgrade_solver_proto_text.bin
+CXX/LD -o .build_release/examples/siamese/convert_mnist_siamese_data.bin
+CXX/LD -o .build_release/examples/cpp_classification/classification.bin
+CXX/LD -o .build_release/examples/cifar10/convert_cifar_data.bin
+CXX/LD -o .build_release/examples/mnist/convert_mnist_data.bin
+.build_release/lib/libcaffe.so: undefined reference to `cv::imread(cv::String const&, int)'
+.build_release/lib/libcaffe.so: undefined reference to `cv::imencode(cv::String const&, cv::_InputArray const&, std::vector<unsigned char, std::allocator<unsigned char> >&, std::vector<int, std::allocator<int> > const&)'
+.build_release/lib/libcaffe.so: undefined reference to `cv::imdecode(cv::_InputArray const&, int)'
+collect2: error: ld returned 1 exit status
+Makefile:640: recipe for target '.build_release/tools/upgrade_net_proto_text.bin' failed
+make: *** [.build_release/tools/upgrade_net_proto_text.bin] Error 1
+make: *** Waiting for unfinished jobs....
+.build_release/lib/libcaffe.so: undefined reference to `cv::imread(cv::String const&, int)'
+.build_release/lib/libcaffe.so: undefined reference to `cv::imencode(cv::String const&, cv::_InputArray const&, std::vector<unsigned char, std::allocator<unsigned char> >&, std::vector<int, std::allocator<int> > const&)'
+.build_release/lib/libcaffe.so: undefined reference to `cv::imdecode(cv::_InputArray const&, int)'
+collect2: error: ld returned 1 exit status
+Makefile:640: recipe for target '.build_release/tools/convert_imageset.bin' failed
+make: *** [.build_release/tools/convert_imageset.bin] Error 1
+.build_release/lib/libcaffe.so: undefined reference to `cv::imread(cv::String const&, int)'
+.build_release/lib/libcaffe.so: undefined reference to `cv::imencode(cv::String const&, cv::_InputArray const&, std::vector<unsigned char, std::allocator<unsigned char> >&, std::vector<int, std::allocator<int> > const&)'
+.build_release/lib/libcaffe.so: undefined reference to `cv::imdecode(cv::_InputArray const&, int)'
+collect2: error: ld returned 1 exit status
+Makefile:640: recipe for target '.build_release/tools/caffe.bin' failed
+make: *** [.build_release/tools/caffe.bin] Error 1
+.build_release/lib/libcaffe.so: undefined reference to `cv::imread(cv::String const&, int)'
+.build_release/lib/libcaffe.so: undefined reference to `cv::imencode(cv::String const&, cv::_InputArray const&, std::vector<unsigned char, std::allocator<unsigned char> >&, std::vector<int, std::allocator<int> > const&)'
+.build_release/lib/libcaffe.so: undefined reference to `cv::imdecode(cv::_InputArray const&, int)'
+collect2: error: ld returned 1 exit status
+Makefile:640: recipe for target '.build_release/tools/compute_image_mean.bin' failed
+make: *** [.build_release/tools/compute_image_mean.bin] Error 1
+.build_release/lib/libcaffe.so: undefined reference to `cv::imread(cv::String const&, int)'
+.build_release/lib/libcaffe.so: undefined reference to `cv::imencode(cv::String const&, cv::_InputArray const&, std::vector<unsigned char, std::allocator<unsigned char> >&, std::vector<int, std::allocator<int> > const&)'
+.build_release/lib/libcaffe.so: undefined reference to `cv::imdecode(cv::_InputArray const&, int)'
+collect2: error: ld returned 1 exit status
+.build_release/lib/libcaffe.so: undefined reference to `cv::imread(cv::String Makefile:645: recipe for target '.build_release/examples/cifar10/convert_cifar_data.bin' failed
+const&, make: *** [.build_release/examples/cifar10/convert_cifar_data.bin] Error 1
+int)'
+.build_release/lib/libcaffe.so: undefined reference to `cv::imencode(cv::String const&, cv::_InputArray const&, std::vector<unsigned char, std::allocator<unsigned char> >&, std::vector<int, std::allocator<int> > const&)'
+.build_release/lib/libcaffe.so: undefined reference to `cv::imdecode(cv::_InputArray const&, int)'
+collect2: error: ld returned 1 exit status
+Makefile:645: recipe for target '.build_release/examples/siamese/convert_mnist_siamese_data.bin' failed
+make: *** [.build_release/examples/siamese/convert_mnist_siamese_data.bin] Error 1
+.build_release/lib/libcaffe.so: undefined reference to `cv::imread(cv::String const&, int)'
+.build_release/lib/libcaffe.so: undefined reference to `cv::imencode(cv::String const&, cv::_InputArray const&, std::vector<unsigned char, std::allocator<unsigned char> >&, std::vector<int, std::allocator<int> > const&)'
+.build_release/lib/libcaffe.so: undefined reference to `cv::imdecode(cv::_InputArray const&, int)'
+collect2: error: ld returned 1 exit status
+Makefile:640: recipe for target '.build_release/tools/upgrade_net_proto_binary.bin' failed
+make: *** [.build_release/tools/upgrade_net_proto_binary.bin] Error 1
+.build_release/lib/libcaffe.so: undefined reference to `cv::imread(cv::String const&, int)'
+.build_release/lib/libcaffe.so: undefined reference to `cv::imencode(cv::String const&, cv::_InputArray const&, std::vector<unsigned char, std::allocator<unsigned char> >&, std::vector<int, std::allocator<int> > const&)'
+.build_release/lib/libcaffe.so: undefined reference to `cv::imdecode(cv::_InputArray const&, int)'
+collect2: error: ld returned 1 exit status
+Makefile:645: recipe for target '.build_release/examples/mnist/convert_mnist_data.bin' failed
+make: *** [.build_release/examples/mnist/convert_mnist_data.bin] Error 1
+.build_release/lib/libcaffe.so: undefined reference to `cv::imread(cv::String const&, int)'
+.build_release/lib/libcaffe.so: undefined reference to `cv::imencode(cv::String const&, cv::_InputArray const&, std::vector<unsigned char, std::allocator<unsigned char> >&, std::vector<int, std::allocator<int> > const&)'
+.build_release/lib/libcaffe.so: undefined reference to `cv::imdecode(cv::_InputArray const&, int)'
+collect2: error: ld returned 1 exit status
+Makefile:640: recipe for target '.build_release/tools/upgrade_solver_proto_text.bin' failed
+make: *** [.build_release/tools/upgrade_solver_proto_text.bin] Error 1
+.build_release/examples/cpp_classification/classification.o: In function `main':
+classification.cpp:(.text.startup+0x236): undefined reference to `cv::imread(cv::String const&, int)'
+.build_release/lib/libcaffe.so: undefined reference to `cv::imencode(cv::String const&, cv::_InputArray const&, std::vector<unsigned char, std::allocator<unsigned char> >&, std::vector<int, std::allocator<int> > const&)'
+.build_release/lib/libcaffe.so: undefined reference to `cv::imdecode(cv::_InputArray const&, int)'
+collect2: error: ld returned 1 exit status
+Makefile:645: recipe for target '.build_release/examples/cpp_classification/classification.bin' failed
+make: *** [.build_release/examples/cpp_classification/classification.bin] Error 1
+.build_release/lib/libcaffe.so: undefined reference to `cv::imread(cv::String const&, int)'
+.build_release/lib/libcaffe.so: undefined reference to `cv::imencode(cv::String const&, cv::_InputArray const&, std::vector<unsigned char, std::allocator<unsigned char> >&, std::vector<int, std::allocator<int> > const&)'
+.build_release/lib/libcaffe.so: undefined reference to `cv::imdecode(cv::_InputArray const&, int)'
+collect2: error: ld returned 1 exit status
+Makefile:640: recipe for target '.build_release/tools/extract_features.bin' failed
+make: *** [.build_release/tools/extract_features.bin] Error 1
+```
+
+
