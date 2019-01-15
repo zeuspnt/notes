@@ -153,4 +153,6 @@ Makefile:640: recipe for target '.build_release/tools/extract_features.bin' fail
 make: *** [.build_release/tools/extract_features.bin] Error 1
 ```
 
+# Fix
+  - On Cmake-gui caffe_libs path to ...3rdparty/caffe/build/lib/libcaffe.so
 
