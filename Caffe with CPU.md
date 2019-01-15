@@ -113,3 +113,30 @@ F
 ```
 export LD_LIBRARY_PATH="/opt/intel/mkl/lib/intel64"
 ```
+
+
+```bash
+make pycaffe
+
+CXX/LD -o python/caffe/_caffe.so python/caffe/_caffe.cpp
+python/caffe/_caffe.cpp:10:10: fatal error: numpy/arrayobject.h: No such file or directory
+ #include <numpy/arrayobject.h>
+          ^~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+Makefile:522: recipe for target 'python/caffe/_caffe.so' failed
+make: *** [python/caffe/_caffe.so] Error 1
+```
+
+# fix
+
+python2 
+
+```bash
+sudo apt-get install python-numpy
+```
+
+python3
+
+```bash
+sudo apt-get install python3-numpy
+```
