@@ -49,6 +49,26 @@ fix
 sudo apt-get install libatlas-base-dev
 ```
 
+# Error
+
+```bash
+Linking CXX shared module openpose_python.cpython-36m-x86_64-linux-gnu.so
+/usr/bin/ld: ../../src/openpose/libopenpose.a(scaleAndSizeExtractor.cpp.o): relocation R_X86_64_PC32 against symbol `_ZTVN2op21ScaleAndSizeExtractorE' can not be used when making a shared object; recompile with -fPIC
+/usr/bin/ld: final link failed: Bad value
+collect2: error: ld returned 1 exit status
+python/openpose/CMakeFiles/openpose_python.dir/build.make:151: recipe for target 'python/openpose/openpose_python.cpython-36m-x86_64-linux-gnu.so' failed
+make[2]: *** [python/openpose/openpose_python.cpython-36m-x86_64-linux-gnu.so] Error 1
+CMakeFiles/Makefile2:1167: recipe for target 'python/openpose/CMakeFiles/openpose_python.dir/all' failed
+make[1]: *** [python/openpose/CMakeFiles/openpose_python.dir/all] Error 2
+Makefile:129: recipe for target 'all' failed
+make: *** [all] Error 2
+```
+
+# Fix
+ - make pycaffe in caffe after make all
+
+
+# Error
 
 ```bash
 LD -o .build_release/lib/libcaffe.so.1.0.0
